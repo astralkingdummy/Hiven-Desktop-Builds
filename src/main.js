@@ -17,12 +17,13 @@ let loadingScreen, hivenClient; // This is here for diasbling the window later o
 function createLoadingScreen() {
   loadingScreen = new BrowserWindow({
     width: 300,
-    height: 400,
+    height: 425,
     frame: false,
     transparent: true,
     resizable: false,
     webPreferences: {
       devTools: false,
+      scrollBounce: true,
     },
   });
   loadingScreen.loadFile(path.join(__dirname, "/views/loading.html"));
